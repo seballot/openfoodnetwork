@@ -49,11 +49,16 @@ RUN sh -c "echo 'deb https://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main'
     apt-get update && \
     apt-get install -yqq --no-install-recommends postgresql-client-9.5 libpq-dev
 
-# Install node & yarn
+# Install Node
+RUN curl -sL https://deb.nodesource.com/setup_14.x  | bash - \
+    apt-get install -y --no-install-recommends nodejs \
+    curl -L https://npmjs.org/install.sh | sh
+
+# Install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && \
-    apt-get install -y nodejs yarn
+    apt-get install -y yarn
 
 # Install Chrome
 RUN wget --quiet -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
