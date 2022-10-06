@@ -359,7 +359,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.2.1)
       railties (>= 3.2.16)
-    json (2.6.1)
+    json (1.8.6)
     json-schema (2.8.1)
       addressable (>= 2.4)
     json_spec (1.1.5)
@@ -453,8 +453,8 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.6.0)
-    rack (2.2.3)
-    rack-mini-profiler (2.3.3)
+    rack (2.2.4)
+    rack-mini-profiler (3.0.0)
       rack (>= 1.2.0)
     rack-protection (2.1.0)
       rack
@@ -788,7 +788,7 @@ DEPENDENCIES
   pry (~> 0.13.0)
   pry-byebug (~> 3.9.0)
   puma
-  rack-mini-profiler (< 3.0.0)
+  rack-mini-profiler (< 4.0.0)
   rack-rewrite
   rack-ssl
   rack-timeout
